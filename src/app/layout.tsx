@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -28,6 +29,15 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+            if (window.CSS && 'paintWorklet' in window.CSS) {
+              window.CSS.paintWorklet.addModule('https://unpkg.com/smooth-corners');
+            }
+          `,
+        }}
+      />
       </body>
     </html>
   );
