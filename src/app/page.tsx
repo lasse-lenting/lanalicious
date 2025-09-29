@@ -2,6 +2,7 @@ import Button from "./components/Button";
 import ScrollBanner from "./components/ScrollBanner";
 import ScrollIndicator from "./components/ScrollIndicator";
 import ThreeBottleScene from "./components/ThreeBottleScene";
+import UsageInstructions from "./components/UsageInstructions";
 
 export default function Home() {
   return (
@@ -45,32 +46,28 @@ export default function Home() {
               </div>
             </div>
           </section>
-          <div className="py-32">
+          <div className="py-12">
             <ScrollBanner />
           </div>
 
 
           {/* Section 2: Text Content with Bottle Final Position */}
-          <section className="h-screen relative flex items-center">
+          <section className="h-screen relative flex items-center mt-[300px] mx-auto">
             <div className="container mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-
-              {/* Left side - Space for bottle (bottle will be positioned here) */}
-              <div className="flex justify-center lg:justify-start">
-                <div className="w-72 h-72 bg-white/50 rounded-full border-2 border-dashed border-gray-300 flex items-center justify-center">
-                  <span className="text-gray-400 font-hardbop text-sm">Bottle positioned here</span>
-                </div>
-              </div>
+              <div></div>
 
               {/* Right side - Text content */}
               <div className="space-y-6">
-                <h2 className="text-5xl lg:text-6xl font-hardbop font-black text-gray-800 leading-tight">
-                  PREMIUM
-                  <span className="block text-[#116A7B]">LANOLIN</span>
+                <h2 className="text-5xl lg:text-6xl font-hardbop font-black text-[#116A7B] leading-tight">
+                  waarom lanoline?
                 </h2>
 
                 <p className="text-xl text-gray-600 leading-relaxed">
-                  Discover the power of pure lanolin in our premium skincare collection.
-                  Natural, effective, and gentle on your skin.
+                  Lanoline is de natuurlijke beschermlaag van schaapsvacht een wax die wol soepel, waterafstotend en sterk houdt.
+                  Gewone wasmiddelen strippen deze natuurlijke oliën weg, waardoor wol droog, ruw en kwetsbaar wordt.
+                  Lanalicious vult deze lanoline aan tijdens het wassen,
+                  zodat jouw wollen kleding langer mooi blijft.
+                  Het resultaat? Zachtere wol, betere vorm, en kleding die jaren meegaat. 
                 </p>
 
                 <div className="space-y-4">
@@ -94,32 +91,8 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Section 3: Test Section (bottle should stop here) */}
-      <section className="h-screen relative bg-gradient-to-br from-blue-900 to-purple-900 flex items-center justify-center">
-        <div className="text-center text-white space-y-6">
-          <h2 className="text-6xl font-hardbop font-black mb-4">TEST SECTION</h2>
-          <p className="text-xl opacity-90 max-w-2xl mx-auto">
-            This is Section 3. The bottle should stay locked in Section 2 position.
-          </p>
-          <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 mt-8">
-            <h3 className="text-2xl font-hardbop font-bold mb-3">Bottle Status</h3>
-            <p className="text-lg">
-              ✅ Bottle should remain visible in final position<br />
-              ✅ Bottle stops moving when reaching this section<br />
-              ✅ Animation locked after Section 2
-            </p>
-          </div>
-        </div>
-      </section>
-      {/* section 4 */}
-      <section className="h-screen relative bg-gradient-to-br from-blue-900 to-purple-900 flex items-center justify-center">
-        <div className="text-center text-white space-y-6">
-          <h2 className="text-6xl font-hardbop font-black mb-4">TEST SECTION</h2>
-          <p className="text-xl opacity-90 max-w-2xl mx-auto">
-            This is Section 3. The bottle should stay locked in Section 2 position.
-          </p>
-        </div>
-      </section>
+      {/* Section 3: Usage Instructions */}
+      <UsageInstructions />
     </div>
   );
 }
