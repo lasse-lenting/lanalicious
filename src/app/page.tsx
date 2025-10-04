@@ -4,12 +4,14 @@ import ScrollIndicator from "./components/ScrollIndicator";
 import ThreeBottleScene from "./components/ThreeBottleScene";
 import ContactForm from "./components/ContactForm";
 import UsageInstructions from "./components/instructions/InstructionsContainer";
+import Header from "./components/Header";
 
 export default function Home() {
   return (
     <div>
+      <Header />
       {/* Container for sections 1 & 2 where bottle should be active */}
-      <div className="relative">
+      <div className="relative" id="product">
         {/* Sticky bottle container - will stick during sections 1 & 2 */}
         <div className="sticky top-0 h-screen z-40 pointer-events-none">
           <ThreeBottleScene />
@@ -76,9 +78,13 @@ export default function Home() {
           </section>
         </div>
       </div>
-      <UsageInstructions />
+      <div id="instructions">
+        <UsageInstructions />
+      </div>
       {/* Contact Form Footer */}
-      <ContactForm />
+      <div id="contact">
+        <ContactForm />
+      </div>
     </div>
   );
 }
