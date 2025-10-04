@@ -90,6 +90,20 @@
     animation-range: 0% 100%;
 }
 
+/* Shimmer gradient animation */
+@keyframes shimmer {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+.animate-shimmer {
+    animation: shimmer 4s linear infinite;
+}
+
 body {
     background-color: #FDF7E7;
 }
