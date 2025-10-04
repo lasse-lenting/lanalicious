@@ -38,7 +38,7 @@ export default function ContactForm() {
   };
 
   return (
-    <footer className="bg-primary text-white py-16 px-6">
+    <footer className="bg-primary text-white py-16 px-6 mt-84">
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 gap-16 items-start">
           {/* Left Column - Header Text */}

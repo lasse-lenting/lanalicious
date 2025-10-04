@@ -171,13 +171,6 @@ export default function ThreeBottleScene() {
         currentScrollProgress = 1.0; // Keep final animation state
       }
       
-      console.log('Bottle animation:', { 
-        scrollY: y,
-        viewportHeight,
-        currentSection,
-        currentScrollProgress: currentScrollProgress.toFixed(3),
-        animationLocked: currentSection > 2
-      });
     };
     
     // Simple window scroll listener
@@ -271,21 +264,6 @@ export default function ThreeBottleScene() {
         let phase = 'POP-OUT';
         if (t > 0.15 && t <= 0.7) phase = 'SLOWMO-HIGHLIGHT';
         else if (t > 0.7) phase = 'FAST-FINISH';
-        
-        console.log('Bottle animation:', {
-          phase,
-          scrollProgress: t.toFixed(3),
-          scale: frontScale.toFixed(3),
-          position: {
-            x: frontPosX.toFixed(2),
-            y: frontPosY.toFixed(2),
-            z: frontPosZ.toFixed(2)
-          },
-          rotation: {
-            y: frontGroup.rotation.y.toFixed(2),
-            z: frontRotZ.toFixed(2)
-          }
-        });
       }
 
       renderer.render(scene, camera);

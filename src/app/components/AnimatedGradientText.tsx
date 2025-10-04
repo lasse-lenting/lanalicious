@@ -11,7 +11,7 @@ export default function AnimatedGradientText({
 }: AnimatedGradientTextProps) {
   return (
     <span
-      className={`relative inline-block bg-gradient-to-r from-secondary via-white to-secondary bg-[length:200%_100%] animate-shimmer bg-clip-text text-transparent pb-2 ${className}`}
+      className={`relative inline-block bg-gradient-to-r from-secondary via-white via-50% to-secondary bg-[length:200%_auto] animate-shimmer bg-clip-text text-transparent pb-2 ${className}`}
       style={{ WebkitBoxDecorationBreak: 'clone' }}
     >
       {children}
