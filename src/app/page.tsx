@@ -1,103 +1,79 @@
-import Image from "next/image";
+import Button from "./components/Button";
+import ScrollBanner from "./components/ScrollBanner";
+import ScrollIndicator from "./components/ScrollIndicator";
+import ThreeBottleScene from "./components/ThreeBottleScene";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div>
+      {/* Container for sections 1 & 2 where bottle should be active */}
+      <div className="relative">
+        {/* Sticky bottle container - will stick during sections 1 & 2 */}
+        <div className="sticky top-0 h-screen z-40 pointer-events-none">
+          <ThreeBottleScene />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+        {/* Content that overlays the bottle */}
+        <div className="-mt-[100vh] relative">
+          {/* Section 1: Hero */}
+          <section className="h-screen relative">
+            <div className="sm:p-8 p-4 h-full">
+              {/* SVG Clip Path Definition */}
+              <svg width="0" height="0" style={{ position: 'absolute' }}>
+                <defs>
+                  <clipPath id="rounded-rect-clip" clipPathUnits="objectBoundingBox">
+                    <path d="M 0.1,0 
+                     L 0.9,0 
+                     Q 1,0 1,0.1 
+                     L 1,0.9 
+                     Q 1,1 0.9,1 
+                     L 0.1,1 
+                     Q 0,1 0,0.9 
+                     L 0,0.1 
+                     Q 0,0 0.1,0 Z" />
+                  </clipPath>
+                </defs>
+              </svg>
+
+              <div className="bg-primary w-full h-full flex flex-col items-center justify-center relative"
+                style={{
+                  clipPath: 'url(#rounded-rect-clip)',
+                }}
+              >
+                <h1 className="text-[18vw] font-hardbop font-black sm:tracking-[12px] tracking-[6px] text-white">LANAL&nbsp;&nbsp;CIOUS</h1>
+                <ScrollIndicator />
+              </div>
+            </div>
+          </section>
+          <div className="py-12">
+            <ScrollBanner />
+          </div>
+
+
+          {/* Section 2: Text Content with Bottle Final Position */}
+          <section className="h-screen relative flex items-center mt-[300px] mx-auto">
+            <div className="container mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div></div>
+
+              {/* Right side - Text content */}
+              <div>
+                <h2 className="text-8xl lg:text-7xl font-bold font-hardbop text-primary leading-tight">
+                  waarom lanoline?
+                </h2>
+
+                <p className="text-lg text-gray-600 leading-relaxed mt-6">
+                  Lanoline is de natuurlijke beschermlaag van schaapsvacht een wax die wol soepel, waterafstotend en sterk houdt.
+                  Gewone wasmiddelen strippen deze natuurlijke oliën weg, waardoor wol droog, ruw en kwetsbaar wordt.
+                  Lanalicious vult deze lanoline aan tijdens het wassen,
+                  zodat jouw wollen kleding langer mooi blijft.
+                  Het resultaat? Zachtere wol, betere vorm, en kleding die jaren meegaat. 
+                </p>
+                <Button className="mt-6">Learn More</Button>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
     </div>
   );
 }
