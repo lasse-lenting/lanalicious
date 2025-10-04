@@ -6,7 +6,7 @@ export default function ScrollBanner() {
     <div className="absolute left-0 right-0 z-10 mt-[60px] sm:mt-[200px]">
       <div className="relative overflow-hidden bg-secondary py-2 transform -skew-y-4">
         <div className="whitespace-nowrap scroll-banner-track">
-          <div className="inline-flex items-center space-x-2 text-white font-hardbop font-bold sm:text-[5vw] text-[14vw] tracking-wider">
+          <div className="inline-flex items-center space-x-2 text-white font-hardbop font-bold sm:text-[5vw] text-[7vw] tracking-wider">
             <span>duurzaam</span>
             <span>•</span>
             <span>eerlijk</span>

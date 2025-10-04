@@ -3,6 +3,7 @@ import ScrollBanner from "./components/ScrollBanner";
 import ScrollIndicator from "./components/ScrollIndicator";
 import ThreeBottleScene from "./components/ThreeBottleScene";
 import ContactForm from "./components/ContactForm";
+import UsageInstructions from "./components/instructions/InstructionsContainer";
 
 export default function Home() {
   return (
@@ -75,7 +76,7 @@ export default function Home() {
           </section>
         </div>
       </div>
-
+      <UsageInstructions />
       {/* Contact Form Footer */}
       <ContactForm />
     </div>
