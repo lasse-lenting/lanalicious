@@ -10,7 +10,7 @@ import { RoomEnvironment } from "three/examples/jsm/environments/RoomEnvironment
 const CONFIG = {
   front: {
     initial: { scale: 0.59, rotZ: 0.0, posX: 0.01, posY: 0, posZ: 0 },
-    stage2:  { scale: 0.59, rotZ: 0.0, posX: -2.5, posY: 0.2, posZ: 1.2 },
+    stage2:  { scale: 0.59, rotZ: 0.0, posX: -1.5, posY: 0.2, posZ: 1 },
   },
 };
 

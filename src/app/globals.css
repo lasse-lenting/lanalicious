@@ -93,3 +93,8 @@
 body {
     background-color: #FDF7E7;
 }
+
+@theme {
+    --color-primary: #116a7b;
+    --color-secondary: #EE7693;
+}

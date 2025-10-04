@@ -2,7 +2,6 @@ import Button from "./components/Button";
 import ScrollBanner from "./components/ScrollBanner";
 import ScrollIndicator from "./components/ScrollIndicator";
 import ThreeBottleScene from "./components/ThreeBottleScene";
-import UsageInstructions from "./components/UsageInstructions";
 
 export default function Home() {
   return (
@@ -36,7 +35,7 @@ export default function Home() {
                 </defs>
               </svg>
 
-              <div className="bg-[#116A7B] w-full h-full flex flex-col items-center justify-center relative"
+              <div className="bg-primary w-full h-full flex flex-col items-center justify-center relative"
                 style={{
                   clipPath: 'url(#rounded-rect-clip)',
                 }}
@@ -57,42 +56,24 @@ export default function Home() {
               <div></div>
 
               {/* Right side - Text content */}
-              <div className="space-y-6">
-                <h2 className="text-5xl lg:text-6xl font-hardbop font-black text-[#116A7B] leading-tight">
+              <div>
+                <h2 className="text-8xl lg:text-7xl font-bold font-hardbop text-primary leading-tight">
                   waarom lanoline?
                 </h2>
 
-                <p className="text-xl text-gray-600 leading-relaxed">
+                <p className="text-lg text-gray-600 leading-relaxed mt-6">
                   Lanoline is de natuurlijke beschermlaag van schaapsvacht een wax die wol soepel, waterafstotend en sterk houdt.
                   Gewone wasmiddelen strippen deze natuurlijke oliën weg, waardoor wol droog, ruw en kwetsbaar wordt.
                   Lanalicious vult deze lanoline aan tijdens het wassen,
                   zodat jouw wollen kleding langer mooi blijft.
                   Het resultaat? Zachtere wol, betere vorm, en kleding die jaren meegaat. 
                 </p>
-
-                <div className="space-y-4">
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-[#116A7B] rounded-full"></div>
-                    <span className="text-gray-700">100% Natural Lanolin</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-[#116A7B] rounded-full"></div>
-                    <span className="text-gray-700">Deeply Moisturizing</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-[#116A7B] rounded-full"></div>
-                    <span className="text-gray-700">Gentle & Effective</span>
-                  </div>
-                </div>
-                <Button>Learn More</Button>
+                <Button className="mt-6">Learn More</Button>
               </div>
             </div>
           </section>
         </div>
       </div>
-
-      {/* Section 3: Usage Instructions */}
-      <UsageInstructions />
     </div>
   );
 }
